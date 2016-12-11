@@ -3,6 +3,7 @@ layout: post
 title:  "An introduction to introduction to Artificial Intelligence"
 date:   2016-12-08 22:56:35 +0000
 categories: jekyll update
+comments: true
 ---
 
 Textbooks offer a reliable, detailed and formal introduction to most subjects. However, introducing Machine Learning and AI isn’t the easiest nut to crack. There are disagreements within the community about what does and what doesn’t qualify as ML or AI. And then there are different philosophical viewpoints like Bayesian or Frequentist, or the modern wonder of Deep Learning, where different schools of thoughts (from cybernetics to connectionism to deep neural networks) have waxed and waned in popularity throughout the course of its history. So I will begin with a less ambitious goal of sketching an introduction to introduction to ML. I will draw some motivation from differences in Mathematics and Physics textbooks with a hope to shed light on some qualitative aspects of ML and AI. 
