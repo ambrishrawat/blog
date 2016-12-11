@@ -1,25 +1,32 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "An introduction to indtroduction to Artificial Intelligence"
 date:   2016-12-08 22:56:35 +0000
 categories: jekyll update
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Textbooks offer a reliable, detailed and formal introduction to most subjects. However, introducing Machine Learning and AI isn’t the easiest nut to crack. There are disagreements within the community about what does and what doesn’t qualify as ML or AI. And then there are different philosophical viewpoints like Bayesian or Frequentist, or the modern wonder of Deep Learning, where different schools of thoughts (from cybernetics to connectionism to deep neural networks) have waxed and waned in popularity throughout the course of its history. So I will begin with a less ambitious goal of sketching an introduction to introduction to ML. I will draw some motivation from differences in Mathematics and Physics textbooks with a hope to shed light on some qualitative aspects of ML and AI. 
 
-Jekyll also offers powerful support for code snippets:
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+During my undergraduate education I managed to get hooked on to a few textbooks, two of which were  - Introduction to Topology and Modern Analysis by G. F. Simmons, and Feynman Lectures in Physics. Like most traditional texts in mathematics, Simmons’ book had a fairly regular structure. Each chapter had an introduction, followed by some to-the-point definitions which quickly led to the meat of the content  - theorems, proofs, lemmas and conjectures. The first two sections were tersely written. With the minimal usage of words, one would be tempted to read them as news bulletins rituals. Simmons, however, was less conservative in the latter sections where the text had ample explanation and examples, making it a more natural read. Definitions and theorems were distinctly marked out with a font formatting. As if borrowed from a bag of universal truths, they were untouched by the language of the text. 
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+Introductions in Feynman’s book or more generally in physics textbooks were vastly different. With the marvels and wonders the chapters promised of demystifying, I would often read, re-read and re-re-read the introductions itself. The scale of mysteries spanned across all powers of ten, from macroscopic galaxies to microscopic atoms and the introductions were absolutely fascinating. In the text that followed, the trait of indisputability and universality lied with observations or phenomenon and not the laws or theory. A theory was susceptible to change. It evolves as it was questioned, or debunked unlike the mathematical theorems where the truths was either appended or extended. 
+
+
+Machine Learning, or the broader Artificial Intelligence emerged out as fields, or more strictly as terms, relatively recently in the taxonomy of science. Moreover, as they borrowed principles from a variety of other domains, there were multiple entry points available for introduction. For instance, an introductory texts could captivate a reader’s attention through aspects of human cognition or the meaning of intelligence. Equivalently, the text could delve into the conceptual frameworks for supervised-unsupervised learning, representation learning, or the statistics of regression. All of these vantage points are convincing as introductions but there are rarely beaded with definitions carved in stone. Ironically the worst off is the elemental unit they all share and talk about, a model, which is unmistakably the most loosely defined term in ML’s vocabulary. Its amorphic quality is best examined through George EP Box’ epiphanic remark - All models are wrong but some are useful.
+
+
+It’s not all that bad.
+
+
+
+
+
+
+The universality of mathematical reasoning can in many cases be reduced to aristotelian logic, where a proposition is either true or false. As they come together in a proof, the underlying reasoning surfaces out. This lucidity and clarity of thought to proofs which is one the hallmarks of this reasoning framework. The theory and hypothesis of physics is similarly backed with observations and empirical measurements of physical phenomenon. Classical thermodynamics is a quintessential example of this which as Einstein famously quoted, “is the only physical theory of universal content which I am convinced will never be overthrown.” 
+In similar fashion, ML is borne out of reasoning under approximate knowledge. This setting closely mimics human reasoning where things are rarely black and white, and arguments and conclusions are made under assumptions. Backed with Cox’s axiom, the language of probability theory can guide those wary of inconsistencies. And as with physics, data or observations would speak for truths, providing constant encouragement to a practitioner for finding better explanations. 
+
+
+The seemingly restrictive connotation of multiple vantage points and vague definitions is surprisingly a strong suite of ML. ML offers a unique environment that embraces and encourages different approaches. It’s like wearing different hats in a detective investigation, each backed with its own set of rules and tradeoffs. Why inspect it from only one angle, when you could do it from two? Or even more? The jargon of ML is vast, and with the current buzz-ness surrounding ML and AI, the vocabulary is only getting larger. So perhaps it is sensible to shed away from a strict definition for ML and make peace with the expression, you’ll I know it when you see it.
+
