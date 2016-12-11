@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Varitional Inference: A high-level overview"
-date:   2016-12-08 22:56:35 +0000
-categories: jekyll update
+date:   2016-12-10 22:56:35 +0000
+categories: 
 comments: true
 ---
 
