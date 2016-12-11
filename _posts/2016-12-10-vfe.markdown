@@ -9,8 +9,7 @@ comments: true
 Much to one’s surprise or delight, reasoning with assumptions can be achieved within the elegance of just two guiding rules - the sum and product rule of probability. Assumptions, opinions, approximate knowledge or beliefs - they are merely placeholders when viewed through the mathematical construct of uncertainty.  Uncertainty (or equivalently degree of belief) in the variability of x, is quantified as a real number through a function p(x). This function, by virtue of Cox’s axioms must uphold the rules of probability theory, and in particular, the sum and product rule.
 
 
-Sum-rule: 
-
+Sum-rule: $$ \nabla_\boldsymbol{x} J(\boldsymbol{x}) $$ 
 
 Product-rule: 
 
