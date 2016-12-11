@@ -16,13 +16,7 @@ Introductions in Feynman’s book or more generally in physics textbooks were va
 
 Machine Learning, or the broader Artificial Intelligence emerged out as fields, or more strictly as terms, relatively recently in the taxonomy of science. Moreover, as they borrowed principles from a variety of other domains, there were multiple entry points available for introduction. For instance, an introductory texts could captivate a reader’s attention through aspects of human cognition or the meaning of intelligence. Equivalently, the text could delve into the conceptual frameworks for supervised-unsupervised learning, representation learning, or the statistics of regression. All of these vantage points are convincing as introductions but there are rarely beaded with definitions carved in stone. Ironically the worst off is the elemental unit they all share and talk about, a model, which is unmistakably the most loosely defined term in ML’s vocabulary. Its amorphic quality is best examined through George EP Box’ epiphanic remark - All models are wrong but some are useful.
 
-
 It’s not all that bad.
-
-
-
-
-
 
 The universality of mathematical reasoning can in many cases be reduced to aristotelian logic, where a proposition is either true or false. As they come together in a proof, the underlying reasoning surfaces out. This lucidity and clarity of thought to proofs which is one the hallmarks of this reasoning framework. The theory and hypothesis of physics is similarly backed with observations and empirical measurements of physical phenomenon. Classical thermodynamics is a quintessential example of this which as Einstein famously quoted, “is the only physical theory of universal content which I am convinced will never be overthrown.” 
 In similar fashion, ML is borne out of reasoning under approximate knowledge. This setting closely mimics human reasoning where things are rarely black and white, and arguments and conclusions are made under assumptions. Backed with Cox’s axiom, the language of probability theory can guide those wary of inconsistencies. And as with physics, data or observations would speak for truths, providing constant encouragement to a practitioner for finding better explanations. 
