@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "An introduction to indtroduction to Artificial Intelligence"
+title:  "An introduction to introduction to Artificial Intelligence"
 date:   2016-12-08 22:56:35 +0000
 categories: jekyll update
 ---
