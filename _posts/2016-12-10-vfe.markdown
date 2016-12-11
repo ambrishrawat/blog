@@ -12,6 +12,7 @@ Much to one’s surprise or delight, reasoning with assumptions can be achieved 
 Sum-rule: $$ p(\boldsymbol{AB}|C) = p(A|BC)p(B|C) $$ 
 Product-rule: $$ p(A|B) + p(\bar{A}|B) = 1 $$
 
+$$ \nabla_\boldsymbol{x} J(\boldsymbol{x}) $$
 
 Uncertainty has an all-pervasive presence in a statistical model - from noise in the observations, to a model’s belief about its parameters, to uncertainty in model predictions, to our belief about the model itself. But with its explicit and faithful representation in Bayesian probability theory, one can reason with it in a principled way.
 
