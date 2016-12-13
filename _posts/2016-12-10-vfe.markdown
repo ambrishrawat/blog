@@ -6,7 +6,7 @@ categories:
 comments: true
 use_math: true
 ---
-## Where does the story begin?
+### Where does the story begin?
 
 Every day, on numerous occasions, we tend to take decisions based on opinions. But this is not a point of dismay, becuase contrary to our speculation, reasoning with assumptions can be achieved within the elegance of just two guiding rules - the sum and product rule of probability theory. Assumptions, opinions, approximate knowledge or beliefs - they are merely placeholders when viewed through the mathematical construct of uncertainty. Uncertainty (or equivalently degree of belief) in the variability of $$x$$, is quantified as a real number through a function $$ p(x) $$, more formally defined as probability. This function, by virtue of Cox’s axioms must uphold the rules of probability theory, in particular, the sum and product rule.
 
@@ -42,9 +42,7 @@ The normalisation constant, $$p(D\vert m)$$, is referred to as *Marginal Likelih
 
 The elegance of first principles makes Bayesian reasoning extremely compelling. However, the theory merely guides on what-to-do and often fails on the how-to front. This latter one is where the practicality and feasibility are contested, or in other words computational and analytical intractability. And more often then what one would desire, these computations are intractable. Therefore, in practice a range of approximations are used. The inexpensive point estimates, being the most common ones where one settles for solutions from optimisation of maximum likelihood and maximum a posteriori. And then there are  deterministic approximations which harness structural understanding of the model like Variational mean field and Expectation Propagation.  Lastly, there are the computationally demanding but often asymptotically exact stochastic methods (like sampling).
 
-### Common sense reduced to calculus. 
-
-### More calculus.
+### Common sense reduced to calculus. More calculus.
 
 Of these different approaches, I find Variational Inference the most interesting, for a few simple reasons.
 
@@ -52,5 +50,5 @@ Of these different approaches, I find Variational Inference the most interesting
  - It’s approach resemples statistcal physics as one can look at stastical propoerties in the norms of entropy proficency in dealing wuth statistical proporties of a system as well as the probablistic reasoning, where one could reason with the new approximate model, in same way as before.
  - The popular support it gathers from reducing the intractability to an optimisation problem
 
-Variational Inference appends to the set of model assumptions, a parameterised approximate posterior (q()). Thus, it encourages you to search for the posterior in a smaller space of possible choices. A space spanned by the range of variational parameters. More importantly, the choice of approximate posterior is not arbitrary. The theory proposes another guiding principle - choose a distribution that most similar the exact posterior of the original model. Similarity, here, being measured via KL divergence. 
+Variational Inference appends to the set of model assumptions, a parameterised approximate posterior (q()). Thus, it encourages you to search for the posterior in a smaller space of possible choices. A space spanned by the range of variational parameters. More importantly, the choice of approximate posterior is not arbitrary. The theory proposes another guiding principle - choose a distribution that most similar the exact posterior of the original model. Similarity, here, being measured via KL divergence, $$ \mathcal{D}_{KL}$$. 
 
