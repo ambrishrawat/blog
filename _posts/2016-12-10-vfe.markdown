@@ -41,6 +41,7 @@ The elegance of first principles makes Bayesian reasoning extremely compelling. 
 
 
 Of these different approaches, I find Variational Inference the most interesting, for a few simple reasons.
+
  - It compromises the least on uncertainty representation. The approximate posterior an analytical form.
  - It’s approach resemples statistcal physics as one can look at stastical propoerties in the norms of entropy proficency in dealing wuth statistical proporties of a system as well as the probablistic reasoning, where one could reason with the new approximate model, in same way as before.
  - The popular support it gathers from reducing the intractability to an optimisation problem
