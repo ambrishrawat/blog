@@ -51,10 +51,10 @@ Of these different approaches, I find Variational Inference the most interesting
 
 Variational Inference appends to the set of model assumptions, a parameterised approximate posterior (q()). Thus, it encourages you to search for the posterior in a smaller space of possible choices. A space spanned by the range of variational parameters. More importantly, the choice of approximate posterior is not arbitrary. The theory proposes another guiding principle - choose a distribution that most similar the exact posterior of the original model. Similarity, here, being measured via  Kullback–Leibler divergence (KL-divergence), $$ \mathcal{D}_{KL}$$, which is defined as follows,
 
-$$ \mathcal{D}_{KL} \equiv \int q_{\lambda}(\theta)\log \frac{p(\theta\vert D,m)}{q(\theta)}\mathrm{d}\theta $$
+$$ \mathcal{D}_{KL}(q_{\lambda}(\theta)\vert\vertp(\theta\vert D,m)) \equiv \int q_{\lambda}(\theta)\log \frac{p(\theta\vert D,m)}{q(\theta)}\mathrm{d}\theta $$
 
 $$ \begin{align}
-\mathcal{D}_{KL} &\equiv \int q_{\lambda}(\theta)\log \frac{q_{\lambda}(\theta)}{p(\theta\vert D,m)}\mathrm{d}\theta\\
+\mathcal{D}_{KL}(q_{\lambda}(\theta)\vert\vertp(\theta\vert D,m)) &\equiv \int q_{\lambda}(\theta)\log \frac{q_{\lambda}(\theta)}{p(\theta\vert D,m)}\mathrm{d}\theta\\
                  &= \int q_{\lambda}(\theta)\log \frac{q_{\lambda}(\theta)p(D\vert m)}{p(\theta, D\vert m)}\mathrm{d}\theta\\
                  &= \int q_{\lambda}(\theta)\log \frac{q_{\lambda}(\theta)}{p(\theta, D\vert m)}\mathrm{d}\theta + \int q_{\lambda}(\theta)\log p(D\vert m) \mathrm{d}\theta\\
                  &= \int q_{\lambda}(\theta)\log \frac{q_{\lambda}(\theta)}{p(\theta, D\vert m)}\mathrm{d}\theta + \log p(D\vert m)
