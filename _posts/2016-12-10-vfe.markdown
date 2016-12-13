@@ -42,7 +42,8 @@ The normalisation constant, $$p(D\vert m)$$, is referred to as *Marginal Likelih
 
 The elegance of first principles makes Bayesian reasoning extremely compelling. However, the theory merely guides on what-to-do and often fails on the how-to front. This latter one is where the practicality and feasibility are contested, or in other words computational and analytical intractability. And more often then what one would desire, these computations are intractable. Therefore, in practice a range of approximations are used. The inexpensive point estimates, being the most common ones where one settles for solutions from optimisation of maximum likelihood and maximum a posteriori. And then there are  deterministic approximations which harness structural understanding of the model like Variational mean field and Expectation Propagation.  Lastly, there are the computationally demanding but often asymptotically exact stochastic methods (like sampling).
 
-## Common sense reduced to calculus. 
+### Common sense reduced to calculus. 
+
 ### More calculus.
 
 Of these different approaches, I find Variational Inference the most interesting, for a few simple reasons.
