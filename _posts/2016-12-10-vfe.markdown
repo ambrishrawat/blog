@@ -56,6 +56,14 @@ $$ \mathcal{D}_{KL}(q_{\lambda}(\theta)\vert\vert p(\theta\vert D,m)) \equiv \in
 $$ \begin{align}
 \mathcal{D}_{KL}(q_{\lambda}(\theta)\vert\vert p(\theta\vert D,m)) &\equiv \int q_{\lambda}(\theta)\log \frac{q_{\lambda}(\theta)}{p(\theta\vert D,m)}\mathrm{d}\theta\\
                  &= \int q_{\lambda}(\theta)\log \frac{q_{\lambda}(\theta)p(D\vert m)}{p(\theta, D\vert m)}\mathrm{d}\theta\\
-                 &= \int q_{\lambda}(\theta)\log \frac{q_{\lambda}(\theta)}{p(\theta, D\vert m)}\mathrm{d}\theta + \int q_{\lambda}(\theta)\log p(D\vert m) \mathrm{d}\theta\\
-                 &= \int q_{\lambda}(\theta)\log \frac{q_{\lambda}(\theta)}{p(\theta, D\vert m)}\mathrm{d}\theta + \log p(D\vert m)
+                 &= \int q_{\lambda}(\theta)\log \frac{q_{\lambda}(\theta)}{p(\theta, D\vert m)}\mathrm{d}\theta - \int q_{\lambda}(\theta)\log p(D\vert m) \mathrm{d}\theta\\
+                 &= \int q_{\lambda}(\theta)\log \frac{q_{\lambda}(\theta)}{p(\theta, D\vert m)}\mathrm{d}\theta - \log p(D\vert m)
 \end{align} $$
+
+
+### Some qualitative queries
+
+- Where does this optimisation put the mass of the exact posterior?
+- Is it symmetric?
+- There are no constraints on type of q.
+- 
