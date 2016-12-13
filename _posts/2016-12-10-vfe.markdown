@@ -1,34 +1,35 @@
 ---
 layout: post
-title:  "Variational Inference: A high-level overview"
+title:  "Variational Inference: a high-level overview"
 date:   2016-12-10 22:56:35 +0000
 categories: 
 comments: true
 ---
-
-Much to one’s surprise or delight, reasoning with assumptions can be achieved within the elegance of just two guiding rules - the sum and product rule of probability. Assumptions, opinions, approximate knowledge or beliefs - they are merely placeholders when viewed through the mathematical construct of uncertainty. Uncertainty (or equivalently degree of belief) in the variability of $$x$$, is quantified as a real number through a function $$ p(x) $$. This function, by virtue of Cox’s axioms must uphold the rules of probability theory, and in particular, the sum and product rule.
+Every day, on numerous occasions, we tend to take decisions based on opinions. But this is not a point of dismay, becuase contrary to our speculation, reasoning with assumptions can be achieved within the elegance of just two guiding rules - the sum and product rule of probability theory. Assumptions, opinions, approximate knowledge or beliefs - they are merely placeholders when viewed through the mathematical construct of uncertainty. Uncertainty (or equivalently degree of belief) in the variability of $$x$$, is quantified as a real number through a function $$ p(x) $$, more formally defined as probability. This function, by virtue of Cox’s axioms must uphold the rules of probability theory, in particular, the sum and product rule.
 
 
 Sum-rule: 
 
-$$ p(AB|C) = p(A|BC)p(BC) $$ 
+$$ P(AB) + P(\bar{A}|B) = 1 $$
 
 Product-rule: 
 
-$$ p(AB) + p(\bar{A}|B) = 1 $$
+$$ P(AB|C) = P(A|BC)p(BC) $$ 
 
 
 Uncertainty has an all-pervasive presence in a statistical model - from noise in the observations, to a model’s belief about its parameters, to uncertainty in model predictions, to our belief about the model itself. But with its explicit and faithful representation in Bayesian probability theory, one can reason with it in a principled way.
 
 
-Most ML tasks can be conveniently (and crudely) summarised as follows - a model, accompanied with its explicit and necessary assumptions based on prior knowledge, is capable of making predictions and performing inference in the light of observed data. In this simplistic pipeline, it is easy to examine how uncertainty factors in modelling tasks.
+Most ML tasks can be conveniently (and crudely) summarised as follows - a model, accompanied with its explicit and necessary assumptions based on prior knowledge, is capable of making predictions and performing inference in the light of observed data. In this simplistic pipeline, it is easy to examine how uncertainty factors at every step of modelling.
+
+**Uncertainty representation**: All the the believed uncertainties in the mathematical description of a model are stated via functional definitions - prior $$p(θ|m)$$, likelihood $$p(D|m)$$, noise processes, among other expressions. 
 
 
-Uncertainty representation: All the the believed uncertainties in the mathematical description of a model are stated via functional definitions - prior p(θ|m), likelihood p(D|m), noise processes, among other expressions. 
+**Uncertainty propagation**: Intuitively, uncertainty propagation is required at the stage of decision-making (computing utilities for prediction or parameter-setting), which in general translates to prediction or inference. Mathematically, this involves the use of marginalisation principle (a direct application of sum and product rule). 
 
-
-Uncertainty propagation: Intuitively, uncertainty propagation is required at the stage of decision-making (computing utilities or parameter-setting), which in general translates to prediction or inference. Mathematically, this involves the use of marginalisation principle (a direct application of sum and product rule). 
-
+$$ \begin{align}
+p(\theta|D,m) = \frac{p(D|\theta,m)p(\theta|m)}{p(D|m)} && p(D|m) = \int p(D|\theta,m)p(\theta|m)\mathrm{d}\theta
+\end{align} $$
 
 Inference and Prediction: The task of inference or learning boils down to squeezing prior uncertainties (p(θ)) (often with respect to parameters, latent variables etc.) through the data (D) to posterior uncertainties (p(θ|D, m)) (following Bayes’ rule).
 
