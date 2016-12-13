@@ -22,7 +22,7 @@ Uncertainty has an all-pervasive presence in a statistical model - from noise in
 
 Most ML tasks can be conveniently (and crudely) summarised as follows - a model, accompanied with its explicit and necessary assumptions based on prior knowledge, is capable of making predictions and performing inference in the light of observed data. In this simplistic pipeline, it is easy to examine how uncertainty factors at every step of modelling.
 
-**Uncertainty representation**: All the the believed uncertainties in the mathematical description of a model are stated via functional definitions - prior $$ p(\theta|m) $$, likelihood $$ p(D|m) $$, noise processes, among other expressions. 
+**Uncertainty representation**: All the the believed uncertainties in the mathematical description of a model are stated via functional definitions - prior $$ p(\theta|m) $$, likelihood $$ p(D|\theta,m)$$, noise processes, among other expressions. 
 
 
 **Uncertainty propagation**: Intuitively, uncertainty propagation is required at the stage of decision-making (computing utilities for prediction or parameter-setting), which in general translates to prediction or inference. Mathematically, this involves the use of marginalisation principle (a direct application of sum and product rule). 
@@ -31,10 +31,10 @@ $$ \begin{align}
 p(\theta|D,m) = \frac{p(D|\theta,m)p(\theta|m)}{p(D|m)} && p(D|m) = \int p(D|\theta,m)p(\theta|m)\mathrm{d}\theta
 \end{align} $$
 
-Inference and Prediction: The task of inference or learning boils down to squeezing prior uncertainties $$(p(\theta))$$ (often with respect to parameters, latent variables etc.) through the data $$(D)$$ to posterior uncertainties $$(p(\theta|D, m))$$ (following Bayes’ rule).
+Inference and Prediction: The task of inference or learning boils down to squeezing prior uncertainties $$p(m) $$ (often with respect to parameters, latent variables etc.) through the data $$ (D) $$ to posterior uncertainties $$(p(\theta|D, m))$$ (following Bayes’ rule).
 
 
-The normalisation constant, $$p(D|m)$$ is referred to as Marginal Likelihood or Model Evidence. At the level of conditioning on m, Bayesian model selection is naturally implemented as Occam’s Razor. Moreover, these updated uncertainties in the posterior can be sequentially propagated while making predictions about the unobserved (new data, $$D$$).
+The normalisation constant, is referred to as Marginal Likelihood or Model Evidence. At the level of conditioning on m, Bayesian model selection is naturally implemented as Occam’s Razor. Moreover, these updated uncertainties in the posterior can be sequentially propagated while making predictions about the unobserved (new data, $$D$$).
 
 
 The elegance of first principles makes Bayesian reasoning extremely compelling. However, the theory merely guides on what-to-do and often fails on the how-to front. This latter one is where the practicality and feasibility are challenged, or in other words computational and analytical intractability. And more often that what would expect, these computations are intractable. Therefore, in practice a range of approximations are used. The inexpensive
