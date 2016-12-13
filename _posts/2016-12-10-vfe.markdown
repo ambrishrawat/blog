@@ -14,7 +14,7 @@ $$ P(AB) + P(\bar{A}|B) = 1 $$
 
 Product-rule: 
 
-$$ P(AB|C) = P(A|BC)p(BC) $$ 
+$$ P(AB|C) = P(A|BC)P(BC) $$ 
 
 
 Uncertainty has an all-pervasive presence in a statistical model - from noise in the observations, to a model’s belief about its parameters, to uncertainty in model predictions, to our belief about the model itself. But with its explicit and faithful representation in Bayesian probability theory, one can reason with it in a principled way.
@@ -34,7 +34,7 @@ p(\theta|D,m) = \frac{p(D|\theta,m)p(\theta|m)}{p(D|m)} && p(D|m) = \int p(D|\th
 Inference and Prediction: The task of inference or learning boils down to squeezing prior uncertainties $$(p(\theta))$$ (often with respect to parameters, latent variables etc.) through the data $$(D)$$ to posterior uncertainties $$(p(\theta|D, m))$$ (following Bayes’ rule).
 
 
-The normalisation constant, $$p(D|m)$$ is referred to as Marginal Likelihood or Model Evidence. At the level of conditioning on m, Bayesian model selection is naturally implemented as Occam’s Razor. Moreover, these updated uncertainties in the posterior can be sequentially propagated while making predictions about the unobserved (new data, $$\cap{D}$$).
+The normalisation constant, $$p(D|m)$$ is referred to as Marginal Likelihood or Model Evidence. At the level of conditioning on m, Bayesian model selection is naturally implemented as Occam’s Razor. Moreover, these updated uncertainties in the posterior can be sequentially propagated while making predictions about the unobserved (new data, $$D$$).
 
 
 The elegance of first principles makes Bayesian reasoning extremely compelling. However, the theory merely guides on what-to-do and often fails on the how-to front. This latter one is where the practicality and feasibility are challenged, or in other words computational and analytical intractability. And more often that what would expect, these computations are intractable. Therefore, in practice a range of approximations are used. The inexpensive
