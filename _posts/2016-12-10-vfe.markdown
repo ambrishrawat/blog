@@ -18,7 +18,7 @@ Product-rule:
 
 $$ P(AB|C) = P(A|BC)P(BC) $$ 
 
-## How does this play with ML or AI?
+### How does this play with ML or AI?
 
 Uncertainty has an all-pervasive presence in a statistical model - from noise in the observations, to a model’s belief about its parameters, to uncertainty in model predictions, to our belief about the model itself. But with its explicit and faithful representation in Bayesian probability theory, one can reason with it in a principled way.
 
@@ -38,11 +38,12 @@ p(\theta|D,m) = \frac{p(D|\theta,m)p(\theta|m)}{p(D|m)} && p(D|m) = \int p(D|\th
 
 The normalisation constant, $$p(D\vert m)$$, is referred to as *Marginal Likelihood* or *Model Evidence*. At the level of conditioning on $$m$$, Bayesian model selection is naturally implemented as Occam’s Razor. Moreover, these updated uncertainties in the posterior can be sequentially propagated while making predictions about the unobserved (new data, $$ D^*$$).
 
-## Let's get down to logistics
+### Let's get down to logistics
 
 The elegance of first principles makes Bayesian reasoning extremely compelling. However, the theory merely guides on what-to-do and often fails on the how-to front. This latter one is where the practicality and feasibility are contested, or in other words computational and analytical intractability. And more often then what one would desire, these computations are intractable. Therefore, in practice a range of approximations are used. The inexpensive point estimates, being the most common ones where one settles for solutions from optimisation of maximum likelihood and maximum a posteriori. And then there are  deterministic approximations which harness structural understanding of the model like Variational mean field and Expectation Propagation.  Lastly, there are the computationally demanding but often asymptotically exact stochastic methods (like sampling).
 
-## Common sense reduced to calculus. And more calculus.
+## Common sense reduced to calculus. 
+### More calculus.
 
 Of these different approaches, I find Variational Inference the most interesting, for a few simple reasons.
 
