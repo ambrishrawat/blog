@@ -8,6 +8,7 @@ use_math: true
 ---
 Every day, on numerous occasions, we tend to take decisions based on opinions. But this is not a point of dismay, becuase contrary to our speculation, reasoning with assumptions can be achieved within the elegance of just two guiding rules - the sum and product rule of probability theory. Assumptions, opinions, approximate knowledge or beliefs - they are merely placeholders when viewed through the mathematical construct of uncertainty. Uncertainty (or equivalently degree of belief) in the variability of $$x$$, is quantified as a real number through a function $$ p(x) $$, more formally defined as probability. This function, by virtue of Cox’s axioms must uphold the rules of probability theory, in particular, the sum and product rule.
 
+![adv_horse](https://cloud.githubusercontent.com/assets/2141648/20526315/6bfbe28e-b0bb-11e6-85b3-eb6f312af4b5.png)
 
 Sum-rule: 
 
