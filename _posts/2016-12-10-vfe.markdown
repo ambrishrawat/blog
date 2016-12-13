@@ -22,7 +22,6 @@ $$ P(AB|C) = P(A|BC)P(BC) $$
 
 Uncertainty has an all-pervasive presence in a statistical model - from noise in the observations, to a model’s belief about its parameters, to uncertainty in model predictions, to our belief about the model itself. But with its explicit and faithful representation in Bayesian probability theory, one can reason with it in a principled way.
 
-
 Most ML tasks can be conveniently (and crudely) summarised as follows - a model, accompanied with its explicit and necessary assumptions based on prior knowledge, is capable of making predictions and performing inference in the light of observed data. In this simplistic pipeline, it is easy to examine how uncertainty factors at every step of modelling.
 
 **Uncertainty representation**: All the the believed uncertainties in the mathematical description of a model are stated via functional definitions - prior $$p(\theta\vert m)$$ , likelihood $$p(D\vert\theta,m)$$, noise processes, among other expressions. 
@@ -52,3 +51,7 @@ Of these different approaches, I find Variational Inference the most interesting
 
 Variational Inference appends to the set of model assumptions, a parameterised approximate posterior (q()). Thus, it encourages you to search for the posterior in a smaller space of possible choices. A space spanned by the range of variational parameters. More importantly, the choice of approximate posterior is not arbitrary. The theory proposes another guiding principle - choose a distribution that most similar the exact posterior of the original model. Similarity, here, being measured via KL divergence, $$ \mathcal{D}_{KL}$$. 
 
+$$ \begin{align}
+p(\theta|D,m) = \frac{p(D|\theta,m)p(\theta|m)}{p(D|m)}\\
+&& p(D|m) = \int p(D|\theta,m)p(\theta|m)\mathrm{d}\theta
+\end{align} $$
