@@ -43,7 +43,7 @@ The elegance of first principles makes Bayesian reasoning extremely compelling. 
 
 ### Common sense reduced to calculus. More calculus.
 
-Of these different approaches, I find Variational Inference the most interesting, for a few simple reasons.
+Of these different approaches, I find Variational Inference the most interesting, for its few simple attacitve reasons.
 
  - It compromises the least on uncertainty representation. The approximate posterior an analytical form.
  - It’s approach resemples statistcal physics as one can look at stastical propoerties in the norms of entropy proficency in dealing wuth statistical proporties of a system as well as the probablistic reasoning, where one could reason with the new approximate model, in same way as before.
@@ -52,6 +52,6 @@ Of these different approaches, I find Variational Inference the most interesting
 Variational Inference appends to the set of model assumptions, a parameterised approximate posterior (q()). Thus, it encourages you to search for the posterior in a smaller space of possible choices. A space spanned by the range of variational parameters. More importantly, the choice of approximate posterior is not arbitrary. The theory proposes another guiding principle - choose a distribution that most similar the exact posterior of the original model. Similarity, here, being measured via KL divergence, $$ \mathcal{D}_{KL}$$. 
 
 $$ \begin{align}
-p(\theta|D,m) = \frac{p(D|\theta,m)p(\theta|m)}{p(D|m)}\\
-&& p(D|m) = \int p(D|\theta,m)p(\theta|m)\mathrm{d}\theta
+p(\theta|D,m) &= \frac{p(D|\theta,m)p(\theta|m)}{p(D|m)}\\
+p(D|m) &= \int p(D|\theta,m)p(\theta|m)\mathrm{d}\theta
 \end{align} $$
