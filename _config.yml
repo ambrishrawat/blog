@@ -28,7 +28,7 @@ disqus:
       shortname: ambrishrawat
 
 # Build settings
-markdown: maruku
+markdown: kramdown
 theme: minima
 gems:
   - jekyll-feed
