@@ -31,21 +31,19 @@ $$ \begin{align}
 p(\theta|D,m) = \frac{p(D|\theta,m)p(\theta|m)}{p(D|m)} && p(D|m) = \int p(D|\theta,m)p(\theta|m)\mathrm{d}\theta
 \end{align} $$
 
-Inference and Prediction: The task of inference or learning boils down to squeezing prior uncertainties $$p(m) $$ (often with respect to parameters, latent variables etc.) through the data $$ (D) $$ to posterior uncertainties $$(p(\theta|D, m))$$ (following Bayes’ rule).
+Inference and Prediction: The task of inference or learning boils down to squeezing prior uncertainties (often with respect to parameters, latent variables etc.) through the data  to posterior uncertainties  (following Bayes’ rule).
 
 
-The normalisation constant, is referred to as Marginal Likelihood or Model Evidence. At the level of conditioning on m, Bayesian model selection is naturally implemented as Occam’s Razor. Moreover, these updated uncertainties in the posterior can be sequentially propagated while making predictions about the unobserved (new data, $$D$$).
+The normalisation constant, is referred to as Marginal Likelihood or Model Evidence. At the level of conditioning on m, Bayesian model selection is naturally implemented as Occam’s Razor. Moreover, these updated uncertainties in the posterior can be sequentially propagated while making predictions about the unobserved (new data, ).
 
 
-The elegance of first principles makes Bayesian reasoning extremely compelling. However, the theory merely guides on what-to-do and often fails on the how-to front. This latter one is where the practicality and feasibility are challenged, or in other words computational and analytical intractability. And more often that what would expect, these computations are intractable. Therefore, in practice a range of approximations are used. The inexpensive
-point estimates, being the most common ones where one settles for solutions from optimisation of maximum likelihood and maximum a posteriori. And then there are  deterministic approximations which harness structural understanding of the model like Variational mean field and Expectation Propagation.  Lastly, there are the computationally demanding but often asymptotically exact stochastic methods (like sampling).
+The elegance of first principles makes Bayesian reasoning extremely compelling. However, the theory merely guides on what-to-do and often fails on the how-to front. This latter one is where the practicality and feasibility are contested, or in other words computational and analytical intractability. And more often then what one would desire, these computations are intractable. Therefore, in practice a range of approximations are used. The inexpensive point estimates, being the most common ones where one settles for solutions from optimisation of maximum likelihood and maximum a posteriori. And then there are  deterministic approximations which harness structural understanding of the model like Variational mean field and Expectation Propagation.  Lastly, there are the computationally demanding but often asymptotically exact stochastic methods (like sampling).
 
 
 Of these different approaches, I find Variational Inference the most interesting, for a few simple reasons.
-It compromises the least on uncertainty representation. The apprxxomate posterior __ an analytical form.
-It’s approach resemples statistcal physics as one can look at stastical propoerties in the norms of entropy proficency in dealing wuth statistical proporties of a system as well as the probablistic reasoning, where one could reason with the new approximate model, in same way as before.
-The popular support it gathers from reducing the intractability to an optimisation problem
-
+- It compromises the least on uncertainty representation. The approximate posterior an analytical form.
+- It’s approach resemples statistcal physics as one can look at stastical propoerties in the norms of entropy proficency in dealing wuth statistical proporties of a system as well as the probablistic reasoning, where one could reason with the new approximate model, in same way as before.
+- The popular support it gathers from reducing the intractability to an optimisation problem
 
 Variational Inference appends to the set of model assumptions, a parameterised approximate posterior (q()). Thus, it encourages you to search for the posterior in a smaller space of possible choices. A space spanned by the range of variational parameters. More importantly, the choice of approximate posterior is not arbitrary. The theory proposes another guiding principle - choose a distribution that most similar the exact posterior of the original model. Similarity, here, being measured via KL divergence. 
 
