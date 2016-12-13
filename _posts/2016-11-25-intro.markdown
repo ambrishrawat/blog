@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "An introduction to introduction to Artificial Intelligence"
+title:  "An introduction to Introduction to Artificial Intelligence"
 date:   2016-11-25 22:56:35 +0000
 categories: 
 comments: true
