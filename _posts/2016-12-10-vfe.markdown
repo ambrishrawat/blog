@@ -23,7 +23,7 @@ Uncertainty has an all-pervasive presence in a statistical model - from noise in
 
 Most ML tasks can be conveniently (and crudely) summarised as follows - a model, accompanied with its explicit and necessary assumptions based on prior knowledge, is capable of making predictions and performing inference in the light of observed data. In this simplistic pipeline, it is easy to examine how uncertainty factors at every step of modelling.
 
-**Uncertainty representation**: All the the believed uncertainties in the mathematical description of a model are stated via functional definitions - prior $$p(\theta|m)$$ , likelihood , noise processes, among other expressions. 
+**Uncertainty representation**: All the the believed uncertainties in the mathematical description of a model are stated via functional definitions - prior $$p(\theta\vert m)$$ , likelihood , noise processes, among other expressions. 
 
 
 **Uncertainty propagation**: Intuitively, uncertainty propagation is required at the stage of decision-making (computing utilities for prediction or parameter-setting), which in general translates to prediction or inference. Mathematically, this involves the use of marginalisation principle (a direct application of sum and product rule). 
