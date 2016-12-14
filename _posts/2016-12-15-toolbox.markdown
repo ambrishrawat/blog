@@ -3,7 +3,7 @@ layout: post
 title:  "AI's toolbox"
 date:   2016-12-15 22:56:35 +0000
 categories: 
-comments: true
+comments: false
 use_math: true
 ---
 
