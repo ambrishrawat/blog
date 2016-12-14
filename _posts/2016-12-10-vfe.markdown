@@ -37,33 +37,57 @@ p(\theta|D,m) = \frac{p(D|\theta,m)p(\theta|m)}{p(D|m)} && p(D|m) = \int p(D|\th
 
 The normalisation constant, $$p(D\vert m)$$, is referred to as *Marginal Likelihood* or *Model Evidence*. At the level of conditioning on $$m$$, Bayesian model selection is naturally implemented as Occam’s Razor. Moreover, these updated uncertainties in the posterior can be sequentially propagated while making predictions about the unobserved (new data, $$ D^*$$).
 
+$$ \begin{align}
+p(D^*|D,m) &= \int p(D^*,\theta\vert D,m)\mathrm{d}\theta\\
+           &= \int p(D^*\vert\theta,D,m) p(\theta\vert D,m) \mathrm{d}\theta
+           &= \int p(D^*\vert\theta,m) p(\theta\vert D,m) \mathrm{d}\theta
+\end{align}$$
+
 ### Let's get down to logistics
 
 The elegance of first principles makes Bayesian reasoning extremely compelling. However, the theory merely guides on what-to-do and often fails on the how-to front. This latter one is where the practicality and feasibility are contested, or in other words computational and analytical intractability. And more often then what one would desire, these computations are intractable. Therefore, in practice a range of approximations are used. The inexpensive point estimates, being the most common ones where one settles for solutions from optimisation of maximum likelihood and maximum a posteriori. And then there are  deterministic approximations which harness structural understanding of the model like Variational mean field and Expectation Propagation.  Lastly, there are the computationally demanding but often asymptotically exact stochastic methods (like sampling).
 
 ### Common sense reduced to calculus. More calculus.
 
-Of these different approaches, I find Variational Inference the most interesting, for its few simple attacitve reasons.
-
- - It compromises the least on uncertainty representation. The approximate posterior an analytical form.
- - It’s approach resemples statistcal physics as one can look at stastical propoerties in the norms of entropy proficency in dealing wuth statistical proporties of a system as well as the probablistic reasoning, where one could reason with the new approximate model, in same way as before.
- - The popular support it gathers from reducing the intractability to an optimisation problem
-
-Variational Inference appends to the set of model assumptions, a parameterised approximate posterior (q()). Thus, it encourages you to search for the posterior in a smaller space of possible choices. A space spanned by the range of variational parameters. More importantly, the choice of approximate posterior is not arbitrary. The theory proposes another guiding principle - choose a distribution that most similar the exact posterior of the original model. Similarity, here, being measured via  Kullback–Leibler divergence (KL-divergence), $$ \mathcal{D}_{KL}$$, which is defined as follows,
+Variational Inference appends to the set of model assumptions, a parameterised approximate posterior ,$$q_{\lambda}(\theta)$$. Thus, it encourages you to search for the posterior in a constrained space of possible choices. A space constrained by the choice of paramteric form and, spanned by the range of variational parameters. More importantly, the choice of approximate posterior is not arbitrary. The theory proposes another guiding principle - choose a distribution that most similar the exact posterior of the original model. Similarity, here, being measured via  Kullback–Leibler divergence (KL-divergence), $$ \mathcal{D}_{KL}$$, which is defined as follows,
 
 $$ \mathcal{D}_{KL}(q_{\lambda}(\theta)\vert\vert p(\theta\vert D,m)) \equiv \int q_{\lambda}(\theta)\log \frac{p(\theta\vert D,m)}{q(\theta)}\mathrm{d}\theta $$
+
+Thus, the VI approach can be summaried as minimising
+
+$$ q_{\lambda^*}= argmin  \mathcal{D}_{KL}(q_{\lambda}(\theta)\vert\vert p(\theta\vert D,m))$$
+
+Moreover, the obtained approximate-posterior can be used for prediction, as before,
+
+$$ \begin{align}
+&& q(D^*|D,m) = \int p(D^*\vert\theta,m) q_{\lambda^*}(\theta\vert D,m) \mathrm{d}\theta
+\end{align} $$
+
+The obvious point of contention here is, why this particular choice of similarity measure? And what are its qualitiative properties. 
+
+#### Why this similarity measure?
+
+This similarity measure naturally yields a lower bound for the marginal likelihood. A quantity, we would have maximised for during model selection. Thus, (hand-wavyly) we are assured that we are not very far from the 'best-model' search we had foresaken due to intractabilities. 
 
 $$ \begin{align}
 \mathcal{D}_{KL}(q_{\lambda}(\theta)\vert\vert p(\theta\vert D,m)) &\equiv \int q_{\lambda}(\theta)\log \frac{q_{\lambda}(\theta)}{p(\theta\vert D,m)}\mathrm{d}\theta\\
                  &= \int q_{\lambda}(\theta)\log \frac{q_{\lambda}(\theta)p(D\vert m)}{p(\theta, D\vert m)}\mathrm{d}\theta\\
-                 &= \int q_{\lambda}(\theta)\log \frac{q_{\lambda}(\theta)}{p(\theta, D\vert m)}\mathrm{d}\theta - \int q_{\lambda}(\theta)\log p(D\vert m) \mathrm{d}\theta\\
-                 &= \int q_{\lambda}(\theta)\log \frac{q_{\lambda}(\theta)}{p(\theta, D\vert m)}\mathrm{d}\theta - \log p(D\vert m)
+                 &= \int q_{\lambda}(\theta)\log \frac{q_{\lambda}(\theta)}{p(\theta, D\vert m)}\mathrm{d}\theta + \int q_{\lambda}(\theta)\log p(D\vert m) \mathrm{d}\theta\\
+                 &= \int q_{\lambda}(\theta)\log \frac{q_{\lambda}(\theta)}{p(\theta, D\vert m)}\mathrm{d}\theta + \log p(D\vert m)
 \end{align} $$
 
+$$ \log p(D\vert m) = {D}_{KL}(q_{\lambda}(\theta)\vert\vert p(\theta\vert D,m)) + \int q_{\lambda}(\theta)\log \frac{p(\theta, D\vert m)}{q_{\lambda}(\theta)}\mathrm{d}\theta $$
 
-### Some qualitative queries
+### Some more queries
 
-- Where does this optimisation put the mass of the exact posterior?
+- Is this measure symmteric? differentiable?
+- What are the qualitative propoerties of 
 - Is it symmetric?
 - There are no constraints on type of q.
 - 
+
+Of these different approaches, Variational Inference the most interesting, for its few simple attacitve reasons.
+
+ - It compromises the least on uncertainty representation. The approximate posterior an analytical form.
+ - It’s approach resemples statistcal physics as one can look at stastical propoerties in the norms of entropy proficency in dealing wuth statistical proporties of a system as well as the probablistic reasoning, where one could reason with the new approximate model, in same way as before.
+ - The popular support it gathers from reducing the intractability to an optimisation problem
