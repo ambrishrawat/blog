@@ -12,3 +12,7 @@ or in the  to digress. Toolbox approach to ML, in data science is quite the same
 and performance is sufficient inspiration for a prationcer to categorically reject models that fails on even one of these 
 fronts. 
 
+- Finding correlations
+- Overfitting
+- fit-and-predict
+
