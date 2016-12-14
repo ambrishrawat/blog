@@ -55,7 +55,7 @@ $$ \mathcal{D}_{KL}(q_{\lambda}(\theta)\vert\vert p(\theta\vert D,m)) \equiv \in
 
 Thus, the VI approach can be summaried as minimising
 
-$$ q_{\lambda^*}= argmin  \mathcal{D}_{KL}(q_{\lambda}(\theta)\vert\vert p(\theta\vert D,m))$$
+$$ q_{\lambda^*}(\theta) = \text{argmin}  \mathcal{D}_{KL}(q_{\lambda}(\theta)\vert\vert p(\theta\vert D,m))$$
 
 Moreover, the obtained approximate-posterior can be used for prediction, as before,
 
