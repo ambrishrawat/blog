@@ -7,7 +7,21 @@ comments: false
 use_math: true
 ---
 
-Generative modelling is in some ways reminiscent of the atom-to-matter paradigm of modern chemical thought.  The elemental forms combine and interact in the strangest of ways resulting in a complex structure which has its own set of observable statistical or global properties. Does our understanding of atom, help us understand matter and its properties better? Or can find the source of these global properties in some fundamental properties of the elemental forms? We could even go a step further. Can we simulate these complex structures if we find the right set of knobs to manipulate atomic forms?
+## Where does the story begin?
 
+Generative modelling is one of the most fascinating paradigms of AI. And the story of generative modelling begins at an observed phenomenon. Colloquially, we often associate the word phenomenon for an object of discussion, when it is known that the object came into being, that it exists because it got created, or generated. Often, in order to understand the phenomemnon and the consequent observations, we attempt to create or recreate the underlying generative process. One example of such a phenomemon is speech. We have come to understood speech, by a surgical breakdown of how elemental forms like sound waves, phonemes, words and sentences come together in the fomration of comprehensible speech. Interpretting observed data as an observed phenomenon, motivates the field of generative modelling.
+
+### Clueless investigations
+
+To a foreign eye, an observed phenomenon in its crudest form is a spreadsheet full of numbers. Furthermore, if the only other piece of information provided is that these numbers were *somehow* generated, then graphical models offer a generic framework to begin an investigation. 
+
+For the sake of illustration, let us take a handcrafted csv file. This file consists of list of 13-dimensional vectors that were ‘somehow’ generated.
+
+### The a b c of simulation models
+
+Complex phenomenon like weather, brain functioning or human-genetics. However, such phenomenon are well studied and 
+We begin by scripting a model, which we call a ‘generator’. With all our intellectual and insightful might or by hook or by crook, we manage to model our ‘generator’. 
+
+### Unscriptable generative processes
 
 
