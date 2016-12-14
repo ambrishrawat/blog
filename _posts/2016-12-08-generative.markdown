@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Generative modelling"
+title:  "From atoms to matter"
 date:   2016-12-08 22:56:35 +0000
 categories: 
 comments: true
