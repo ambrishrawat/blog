@@ -18,16 +18,18 @@ An observed phenomenon in its crudest computatinal form is a spreadsheet full of
 Graphical models offer a generic framework to begin an investigation, when the only other piece of information provided is that these numbers were somehow generated. For the sake of illustration, let's say that these observations are 13-dimensional real-numbered vectors (available here).
 
 
-
 ### The a b c of simulation models
 
 Complex phenomenon like weather, brain, genetics or the Big-Bang have been  of study for centuries. Their mysteriousness rarely fails to strike a chord with human curiosity. With the current knowledge at disposal, a researcher often scripts a simulator that captures the underlying dynamics. 
 
-### Unscriptable generative processes
+One big observation of today's weather. 
+
+### Indescribable generation and indescribable similarity
+
+Phenomemon of natural images. 
 
 #### Generative Adversarial Networks
 
 #### Variational Autoencoders
 
-### How do you know you are doing well?
 
