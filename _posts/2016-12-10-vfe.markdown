@@ -56,7 +56,7 @@ Thus, the VI approach can be summaried as minimising
 
 $$ q_{\lambda^*}(\theta) = \text{argmin}  \mathcal{D}_{KL}(q_{\lambda}(\theta)\vert\vert p(\theta\vert D,m))$$
 
-Moreover, the obtained approximate-posterior can be used for prediction, as before,
+Moreover, the obtained approximate-posterior can replace the exact posterior for any further practical compuatations, like  prediction,
 
 $$ \begin{align}
 && q(D^*|D,m) = \int p(D^*\vert\theta,m) q_{\lambda^*}(\theta\vert D,m) \mathrm{d}\theta
@@ -83,7 +83,7 @@ $$ \log p(D\vert m) =   \int q_{\lambda}(\theta)\log \frac{p(\theta, D\vert m)}{
 
 - It's grounding in statistical physics
 
-Variational Inference is viserally gratifying because of its grounding in statiscal physics. The marginal-likelihood,$$\log p(D\vert m)$$, differs from the system's free-energy $$ \mathbb{E}_{q_{\lambda}(\theta)}[\log\frac{p(\theta, D\vert m)}{q_{\lambda}(\theta)]$$, which in simplified form is the sum of energy and entropy $$\mathbb{E}_{q_{\lambda}(\theta)}[\log p(\theta, D\vert m)] + H(q)$$.
+Variational Inference is viserally gratifying because of its grounding in statiscal physics. The marginal-likelihood,$$\log p(D\vert m)$$, differs from the system's free-energy $$ \mathbb{E}_{q_{\lambda}(\theta)}[\log\frac{p(\theta, D\vert m)}{q_{\lambda}(\theta)}]$$, which in simplified form is the sum of energy and entropy $$\mathbb{E}_{q_{\lambda}(\theta)}[\log p(\theta, D\vert m)] + H(q)$$.
 
 - Intergration simplified to optimisation
 
@@ -99,10 +99,13 @@ Guding principles in VI don't mandate a particular choice of $$q_{\lambda}(\thet
 
 ### Why not use VI?
 
-KL divergence is not symmetric. In fact, minimising the reverse-KL is the basis of another approximate inference scheme - Expectation Propagation. 
+KL divergence is not symmetric. In fact, minimising the reverse-KL is the basis of another approximate inference scheme - Expectation Propagation. Due to a specific chocie of similarity measure, VI scheme doesn't guraantee that obtained approximate posterior will have desired properties.
 
 - What are the qualitative propoerties of obtained $$q_{\lambda^*}(\theta)$$
 
+In high-dimensional spaces and multi-modal exact posteriors, VI often fails. The choice of KL-divergence results can result in an approximate posterior where the the optimal apprxoimationm, $$q_{\lambda^*}(\theta)$$ distributes its mass in counter-intuitively. For instance, it could place a high-mass on regions where the orignal distribution had a low or zero mass. 
+
 - Are all the uncertainties propagated?
 
+As VI is often extended with a new layer of structure approximation like mean-field, it often fails to propagate uncertainties. 
 
