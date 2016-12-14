@@ -22,12 +22,11 @@ $$ P(AB|C) = P(A|BC)P(BC) $$
 
 Uncertainty has an all-pervasive presence in a statistical model - from noise in the observations, to a model’s belief about its parameters, to uncertainty in model predictions, to our belief about the model itself. But with its explicit and faithful representation in Bayesian probability theory, one can reason with it in a principled way.
 
-Most ML tasks can be conveniently (and crudely) summarised as follows - a model, accompanied with its explicit and necessary assumptions based on prior knowledge, is capable of making predictions and performing inference in the light of observed data. In this simplistic pipeline, it is easy to examine how uncertainty factors at every step of modelling.
+Most ML tasks can be conveniently (and crudely) summarised as follows - a model, accompanied with its explicit and necessary assumptions based on prior knowledge, is capable of making predictions and performing inference in the light of some observations. In this simplistic pipeline, it is easy to examine how uncertainty factors at every step of modelling.
 
-**Uncertainty representation**: All the the believed uncertainties in the mathematical description of a model are stated via functional definitions - prior $$p(\theta\vert m)$$ , likelihood $$p(D\vert\theta,m)$$, noise processes, among other expressions. 
+**Uncertainty representation**: All the the believed uncertainties in the mathematical description of a model are stated via functional definitions - prior $$p(\theta\vert m)$$ , likelihood $$p(D\vert\theta,m)$$, noise processes, among other expressions. These functional expressions and implcit conditioning, capture different conceptions of uncertainties like parametric and structural uncertainties.
 
-
-**Uncertainty propagation**: Intuitively, uncertainty propagation is required at the stage of decision-making (computing utilities for prediction or parameter-setting), which in general translates to prediction or inference. Mathematically, this involves the use of marginalisation principle (a direct application of sum and product rule). 
+**Uncertainty propagation**: All the different kinds of uncertainties, implicit or explicit in an model should be propagated for decision-making (computing utilities for prediction or parameter-setting), which in general translates to prediction or inference. Mathematically, this involves the use of marginalisation principle (a direct application of sum and product rule). 
 
 **Inference and Prediction**: The task of inference or learning boils down to squeezing prior uncertainties $$(p(\theta))$$, (often with respect to parameters, latent variables etc.) through the data, $$D$$, to posterior uncertainties $$p(\theta\vert D,m)$$ (following Bayes’ rule).
 
@@ -43,7 +42,7 @@ p(D^*|D,m) &= \int p(D^*,\theta\vert D,m)\mathrm{d}\theta\\
            &= \int p(D^*\vert\theta,m) p(\theta\vert D,m) \mathrm{d}\theta
 \end{align}$$
 
-### Let's get down to logistics
+### Logistics can be tricky
 
 The elegance of first principles makes Bayesian reasoning extremely compelling. However, the theory merely guides on what-to-do and often fails on the how-to front. This latter one is where the practicality and feasibility are contested, or in other words computational and analytical intractability. And more often then what one would desire, these computations are intractable. Therefore, in practice a range of approximations are used. The inexpensive point estimates, being the most common ones where one settles for solutions from optimisation of maximum likelihood and maximum a posteriori. And then there are  deterministic approximations which harness structural understanding of the model like Variational mean field and Expectation Propagation.  Lastly, there are the computationally demanding but often asymptotically exact stochastic methods (like sampling).
 
@@ -103,5 +102,7 @@ Guding principles in VI don't mandate a particular choice of $$q_{\lambda}(\thet
 KL divergence is not symmetric. In fact, minimising the reverse-KL is the basis of another approximate inference scheme - Expectation Propagation. 
 
 - What are the qualitative propoerties of obtained $$q_{\lambda^*}(\theta)$$
+
+- Are all the uncertainties propagated?
 
 
