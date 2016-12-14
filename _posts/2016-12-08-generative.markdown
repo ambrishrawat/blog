@@ -11,13 +11,13 @@ use_math: true
 
 Generative modelling is one of the most fascinating paradigms of AI. And the story of generative modelling begins at observations of a phenomenon. Colloquially, we often associate the word phenomenon for an object of discussion, when we believe that the object came into being, that it exists because it got created, or somehow generated. Often, in order to understand such a phenomemnon, we attempt to recreate or mimic its underlying generative process. One such phenomemon that AI has been successfull at is speech. AI claims to understand its observation (spoken dialouges) through a surgical breakdown of how elemental forms like sound waves, phonemes, words and sentences are strung together its synthesis.
 
-### CLassical modelling for clueless beginings
+### Classical modelling for clueless beginings
 
-To a foreign eye, an observed phenomenon in its crudest form is a spreadsheet full of numbers. Let's call this collection of observations as $$X = \{x_i\}_{i \in I}$$.
+An observed phenomenon in its crudest computatinal form is a spreadsheet full of numbers. Let's call this collection of $$N$$ observations as $$X = \{x_i\}_1^N$$. In our generative modelling, we are foruntate to have access to a few control knobs, $$\Theta = \{\theta_i\}_1^M$$. Some knobs will provide us the necessary randomness to generate different numbers in observation space. Our generative process is also a knob, but this is a reflection of what we hypothesize and believe and is fixed. The third set of knobs are the ones we can finetune. These knobs allow us to direct our generative model towards generating something meaningful. 
 
-Furthermore, if the only other piece of information provided is that these numbers were somehow generated, then graphical models offer a generic framework to begin an investigation.
+Graphical models offer a generic framework to begin an investigation, when the only other piece of information provided is that these numbers were somehow generated. For the sake of illustration, let's say that these observations are 13-dimensional real-numbered vectors (available here).
 
-For the sake of illustration, let us take a handcrafted csv file. This file consists of list of 13-dimensional vectors that were ‘somehow’ generated.
+
 
 ### The a b c of simulation models
 
@@ -25,7 +25,9 @@ Complex phenomenon like weather, brain, genetics or the Big-Bang have been  of s
 
 ### Unscriptable generative processes
 
+#### Generative Adversarial Networks
 
+#### Variational Autoencoders
 
 ### How do you know you are doing well?
 
