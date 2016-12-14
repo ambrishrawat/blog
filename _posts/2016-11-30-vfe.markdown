@@ -81,11 +81,11 @@ $$ \log p(D\vert m) =   \int q_{\lambda}(\theta)\log \frac{p(\theta, D\vert m)}{
 
 ### Why use VI?
 
-- It's grounding in statistical physics
+- Its grounded in statistical physics
 
 Variational Inference is viserally gratifying because of its grounding in statiscal physics. The marginal-likelihood,$$\log p(D\vert m)$$, differs from the system's free-energy $$ \mathbb{E}_{q_{\lambda}(\theta)}[\log\frac{p(\theta, D\vert m)}{q_{\lambda}(\theta)}]$$, which in simplified form is the sum of energy and entropy $$\mathbb{E}_{q_{\lambda}(\theta)}[\log p(\theta, D\vert m)] + H(q)$$.
 
-- Intergration simplified to optimisation
+- Its intergration simplified to optimisation
 
 VI owes its popularity to reducing an intractable integral to an optimisation problem which involves derivative computations.
 
@@ -99,9 +99,9 @@ Guding principles in VI don't mandate a particular choice of $$q_{\lambda}(\thet
 
 ### Why not use VI?
 
-KL divergence is not symmetric. In fact, minimising the reverse-KL is the basis of another approximate inference scheme - Expectation Propagation. Due to a specific chocie of similarity measure, VI scheme doesn't guraantee that obtained approximate posterior will have desired properties.
+KL divergence is not symmetric. In fact, minimising the reverse-KL is the basis of another approximate inference scheme - Expectation Propagation. Due to a specific chocie of similarity measure, VI has no guraantees that the obtained approximate posterior will have desired properties.
 
-- What are the qualitative propoerties of obtained $$q_{\lambda^*}(\theta)$$
+- What are the qualitative propoerties of the obtained $$q_{\lambda^*}(\theta)$$
 
 In high-dimensional spaces and multi-modal exact posteriors, VI often fails. The choice of KL-divergence results can result in an approximate posterior where the the optimal apprxoimationm, $$q_{\lambda^*}(\theta)$$ distributes its mass in a counter-intuitive fashion. For instance, it could place a high-mass on regions where the orignal distribution had a low or zero mass. 
 
