@@ -76,7 +76,11 @@ $$ \begin{align}
                  &= \int q_{\lambda}(\theta)\log \frac{q_{\lambda}(\theta)}{p(\theta, D\vert m)}\mathrm{d}\theta + \log p(D\vert m)
 \end{align} $$
 
+equivalently,
+
 $$ \log p(D\vert m) = {D}_{KL}(q_{\lambda}(\theta)\vert\vert p(\theta\vert D,m)) + \int q_{\lambda}(\theta)\log \frac{p(\theta, D\vert m)}{q_{\lambda}(\theta)}\mathrm{d}\theta $$
+
+
 
 ### Some more queries
 
