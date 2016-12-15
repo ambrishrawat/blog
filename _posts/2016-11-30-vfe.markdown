@@ -99,7 +99,7 @@ Guding principles in VI don't mandate a particular choice of $$q_{\lambda}(\thet
 
 ### Why not use VI?
 
-KL divergence is not symmetric. In fact, minimising the reverse-KL is the basis of another approximate inference scheme - Expectation Propagation. Due to a specific chocie of similarity measure, VI has no guraantees that the obtained approximate posterior will have desired properties.
+KL divergence is not symmetric. In fact, minimising the reverse-KL leads to other interesting properties which is found to be useful in another approximate inference scheme - Expectation Propagation. Due to a specific chocie of similarity measure, VI has no guraantees that the obtained approximate posterior will have desired properties.
 
 - What are the qualitative propoerties of the obtained $$q_{\lambda^*}(\theta)$$
 
