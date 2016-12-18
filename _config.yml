@@ -20,7 +20,7 @@ email: ambrishrawat@gmail.com
 #  line in _config.yml. It will appear in your document head meta (for
 #  Google search results) and in your feed.xml site description.
 baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "http://90percenthumour.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://ambrishrawat.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: AmbrishRawat
 github_username:  ambrishrawat
 
