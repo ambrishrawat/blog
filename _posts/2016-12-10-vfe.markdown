@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Common sense reduced to calculus. More calculus."
-date:   2016-11-30 22:56:35 +0000
+date:   2016-12-10 22:56:35 +0000
 categories: 
 comments: true
 use_math: true
