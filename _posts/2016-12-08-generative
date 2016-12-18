@@ -9,34 +9,21 @@ use_math: true
 
 ## Where does the story begin?
 
-Generative modelling is one of the most fascinating paradigms of AI. And the story of generative modelling begins at observations of phenomena. Colloquially,
-we associate phenomenon with an object of discussion, when we believe that the object somehow came into being, that it exists because it got created, or
-somehow generated. Often, in order to understand such a phenomemnon, we attempt to recreate or mimic its underlying generative process. One such phenomemon 
-that AI has been successfull at mimicing is natural speech. AI claims to 'understand' spoken speech through a surgical breakdown of 
-how elemental forms like sound waves, phonemes, words and sentences are strung together in its synthesis.
+Generative modelling is one of the most fascinating paradigms of AI. And the story of generative modelling begins at observations of phenomena. Colloquially, we associate phenomenon with an object of discussion, when we believe that the object somehow came into being, that it exists because it got created, or somehow generated. Often, in order to understand such a phenomemnon, we attempt to recreate or mimic its underlying generative process. One such phenomemon that AI has been successfull at mimicing is natural speech. AI claims to 'understand' spoken speech through a surgical breakdown of how elemental forms like sound waves, phonemes, words and sentences are strung together in its synthesis.
 
 ### A classical generator
 
-Often a statistsian's kneejerk reaction to a sequence of real numbers is computinh mathemtically grounded in law of large numbers, implicit to this computation is the notion of existence. A black-box exists that spits out numbers.  Our proposal to mimicing its creative process is via a sampler.  
- 
-The existence of a Probability distribution function,  
+Often my kneejerk reaction to a large sequence of real numbers is computing their mean and variance. Although mathemtically grounded in law of large numbers, implicit to this computation is a notion of existence. I believe that there exists a 'true' distribution from which the numbers were generated. In fact, by extrapolating or matching the sample moments to the moments of my believed distribution, I can write a generator that samples numbers to the ones observed. For instance, , in Python. These random-samplers used in various programming languages are a classical examples of generative models. With chained conditioning, these basic generators can be further combined to represent other complex distributions. This marriage of graph theory and statistics has developed as a field in itself as Probabilistic Graphical Models.
 
-The observations of a phenomenon in their most primitive compuational form are recorded as numbers. Let's call this collection of $$N$$ observations of the
-phenomenon as $$X = \{x_i\}_1^N$$.  our generative modelling, we are foruntate to have access to some control knobs, $$\Theta = \{\theta_j\}$$. 
-Some of these knobs provide us the necessary randomness for generate diverse samples. This irreducible knob is commonly refferred to as noise. 
-By what the generative process is, is also a knob, but this is a reflection of what we hypothesize and believe, and hence, is fixed. 
-The third set of knobs are the ones we can manipulate. These knobs allow us to direct our model towards generating something meaningful. 
-
-Graphical models offer a generic framework to begin an investigation, when the only other piece of information provided is that these numbers were somehow generated. For the sake of illustration, let's say that these observations are 13-dimensional real-numbered vectors (available here).
-
+Let's say we were to write generative process that could have led to N observations, $$\{x_i\}^N_1$$. By hook or crook, or some mental-gymnastics one might be able to engineer a generative process for low dimensiona $$x$$. However, things can be complex as distrubtions become highly multi-modal . Moreover, there is also a challenging task is in verifying if the generated samples even make sense. 
+One reliable way to validate the sample-generation process, is by estimating the density of generated samples. But there are situations when this is infeasible. There are two interesting approaches to when the generative process is intricate and  which I wish to look a closer look at.
 
 ### The a b c of simulation models
 
-Complex phenomenon like weather, brain, genetics or the Big-Bang have been  of study for centuries. Their mysteriousness rarely fails to strike a chord with human curiosity. With the current knowledge at disposal, a researcher often scripts a simulator that captures the underlying dynamics. 
+Complex phenomenon like weather, brain, genetics or the Big-Bang have been studied by humans for centuries. Their mysteriousness rarely fails to strike a chord with our curiosity. While studying these phenomenon, we often simulate their involved dynamics through large complex computer-programs. 
 
-One big observation of today's weather. 
 
-### Indescribable generation and indescribable similarity
+### Generating by merely observing
 
 Phenomemon of natural images. 
 
