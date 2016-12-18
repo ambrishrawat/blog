@@ -17,7 +17,7 @@ how elemental forms like sound waves, phonemes, words and sentences are strung t
 
 ### A classical generator
 
-Often a statistsian's kneejerk reaction to a sequence of real numbers is computing sample statistics like mean and variance. Although mathemtically grounded in law of large numbers, implicit to this computation is the notion of existence. A black-box exists that spits out numbers.  Our proposal to mimicing its creative process is via a sampler.  
+Often a statistsian's kneejerk reaction to a sequence of real numbers is computinh mathemtically grounded in law of large numbers, implicit to this computation is the notion of existence. A black-box exists that spits out numbers.  Our proposal to mimicing its creative process is via a sampler.  
  
 The existence of a Probability distribution function,  
 
