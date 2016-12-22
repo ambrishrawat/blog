@@ -20,8 +20,9 @@ One reliable way to validate the sample-generation process, is by estimating the
 
 ### The a b c of simulation models
 
-Complex phenomenon like weather, brain, genetics or the Big-Bang have been studied by humans for centuries. Their mysteriousness rarely fails to strike a chord with our curiosity. While studying these phenomenon, we often simulate their involved dynamics through large complex computer-programs. 
+Complex phenomenon like weather, brain, genetics or the Big-Bang have been studied by humans for centuries. Their mysteriousness rarely fails to strike a chord with our curiosity. While studying these phenomenon, we often simulate their involved dynamics through large complex computer-programs. Moreover, these phenomenon also have the added baggage of complex measurements. Big Bang for instance hass everything in our -- as its measurement.
 
+For such phenomemnon, where we have one large observation $$Y$$ or its summary statistic $$y_{sum}$$. 
 
 ### Generating by merely observing
 
