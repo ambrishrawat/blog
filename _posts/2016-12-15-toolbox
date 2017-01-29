@@ -9,6 +9,7 @@ use_math: true
 
 ## Where does the story begin?
 
+
 In situations where the goal is set, destination is fixed and requirement unequivocally specified, it is often pointless, 
 or in the  to digress. Toolbox approach to ML, in data science is quite the same. An insatiable hunger for results, accuracy
 and performance is sufficient inspiration for a prationcer to categorically reject models that fails on even one of these 
