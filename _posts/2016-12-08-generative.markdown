@@ -18,8 +18,11 @@ The generative paradigm of AI contests to impart understanding to an AI agent in
 Often my kneejerk reaction when faced with a large sequence of real numbers is computing some statistical properties like mean and variance. Although mathemtically grounded in law of large numbers, implicit to this computation is a notion of existence. I like to believe that there exists a 'true' distribution from which the numbers were generated. In fact, by matching the sample moments to the moments of my believed distribution, I am able to script a generator that can sample other similar numbers. These random-samplers used in various programming languages are a classical examples of generative models. With chained applications of product-rule and sum-rule, these basic generators can be further combined to represent other more complex distributions. 
 
 Let's say we were to write generative process that could have led to $$N$$ observations, $$\{x_i\}^N_1$$. 
+
 - If $$x$$ was a one-dimensionl entity, traditional distributions offer a reliable starting point. A large family of distributions are available, spanning both discrerte and continuous random variables.
+
 - Multi-modality - 
+
 - However, things can be complex as distrubtions become highly multi-modal . Moreover, there is also a challenging task is in verifying if the generated samples even make sense. 
 One reliable way to validate the sample-generation process, is by estimating the density of generated samples. But there are situations when this is infeasible. There are two interesting approaches to when the generative process is intricate and  which I wish to look a closer look at.
 
