@@ -1,0 +1,75 @@
+\documentclass[twoside]{article}
+\usepackage{amsmath,amssymb,amsthm,graphicx}
+\usepackage{epsfig}
+\usepackage[authoryear]{natbib}
+
+\input{stat-macros}
+
+\setlength{\oddsidemargin}{0.25 in}
+\setlength{\evensidemargin}{-0.25 in}
+\setlength{\topmargin}{-0.6 in}
+\setlength{\textwidth}{6.5 in}
+\setlength{\textheight}{8.5 in}
+\setlength{\headsep}{0.75 in}
+\setlength{\parindent}{0 in}
+\setlength{\parskip}{0.1 in}
+
+\newcommand{\lecture}[4]{
+   \pagestyle{myheadings}
+   \thispagestyle{plain}
+   \newpage
+   \setcounter{page}{1}
+   \noindent
+   \begin{center}
+   \framebox{
+      \vbox{\vspace{2mm}
+    \hbox to 6.28in { {\bf 90\%Humour - Eigentropy \hfill Blog Date: #4} }
+       \vspace{6mm}
+       \hbox to 6.28in { {\Large \hfill #1  \hfill}  }
+       \vspace{6mm}
+       \hbox to 6.28in { {\it Author: #2 \hfill} }
+      \vspace{2mm}}
+   }
+   \end{center}
+   \markboth{#1}{#1}
+   \vspace*{4mm}
+}
+
+% Local Macros Put your favorite macros here that don't appear in
+% stat-macros.tex.  We can eventually incorporate them into
+% stat-macros.tex if they're of general use.
+
+\begin{document}
+
+\lecture{Create to Understand}{Ambrish Rawat}{}{February 7, 2017}
+
+\section{Where does the story begin?}
+
+Generative modelling is one of the most fascinating paradigms of AI. And its story begins at observations of what we perceive as *phenomena*. Colloquially, the word phenomenon is associated with an object, when that object is believed to exist. Furthermore, it exists because it got created. Often, in order to understand such a phenomemnon and its subsequent evolution, we attempt to recreate or mimic its underlying generative process. For instance, consider the phenomenon of light. Through nmuerous monumental research explorations, some experimental and some conjectured or argued through laws of physics, we now have a have *generative model* of light.
+
+The generative paradigm of AI contests to impart understanding to an AI agent in the similar way. One such phenomemon that AI has been successfull at mimicing is natural speech. AI claims to 'understand' spoken speech through its recreation. It achieves this via a surgical analysis of how elemental forms like sound waves, phonemes, words and sentences are strung together in its coherent synthesis.
+
+\section{A classical generator}
+
+Often my kneejerk reaction when faced with a large sequence of real numbers is computing some statistical properties like mean and variance. Although mathemtically grounded in law of large numbers, implicit to this computation is a notion of existence. I like to believe that there exists a 'true' distribution from which the numbers were generated. In fact, by matching the sample moments to the moments of my believed distribution, I am able to script a generator that can sample other similar numbers. These random-samplers used in various programming languages are a classical examples of generative models. With chained applications of product-rule and sum-rule, these basic generators can be further combined to represent other more complex distributions.
+
+Let's say we were to write generative process that could have led to $$N$$ observations, $$\{x_i\}^N_1$$.
+\begin{itemize}
+  \item If $$x$$ was a one-dimensionl entity, traditional distributions offer a reliable starting point. A large family of distributions are available, spanning both discrerte and continuous random variables.
+  \item Multi modality
+  \item - However, things can be complex as distrubtions become highly multi-modal . Moreover, there is also a challenging task is in verifying if the generated samples even make sense.
+\end{itemize}
+
+One reliable way to validate the sample-generation process, is by estimating the density of generated samples. But there are situations when this is infeasible. There are two interesting approaches to when the generative process is intricate and  which I wish to look a closer look at.
+
+
+\subsection{ The a b c of simulation models} % (fold)
+\label{sub:_the_a_b_c_of_simulation_models}
+
+% subsection _the_a_b_c_of_simulation_models (end)
+
+
+\end{document}
+
+
+
