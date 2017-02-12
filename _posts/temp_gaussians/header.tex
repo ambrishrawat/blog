@@ -1,0 +1,71 @@
+\documentclass[twoside]{article}
+\usepackage{amsmath,amssymb,amsthm,graphicx}
+\usepackage{epsfig}
+\usepackage[authoryear]{natbib}
+
+\input{stat-macros}
+
+\setlength{\oddsidemargin}{0.25 in}
+\setlength{\evensidemargin}{-0.25 in}
+\setlength{\topmargin}{-0.6 in}
+\setlength{\textwidth}{6.5 in}
+\setlength{\textheight}{8.5 in}
+\setlength{\headsep}{0.75 in}
+\setlength{\parindent}{0 in}
+\setlength{\parskip}{0.1 in}
+
+\newcommand{\lecture}[4]{
+   \pagestyle{myheadings}
+   \thispagestyle{plain}
+   \newpage
+   \setcounter{page}{1}
+   \noindent
+   \begin{center}
+   \framebox{
+      \vbox{\vspace{2mm}
+    \hbox to 6.28in { {\bf 90\%Humour - Eigentropy \hfill Blog Date: #4} }
+       \vspace{6mm}
+       \hbox to 6.28in { {\Large \hfill #1  \hfill}  }
+       \vspace{6mm}
+       \hbox to 6.28in { {\it Author: #2 \hfill} }
+      \vspace{2mm}}
+   }
+   \end{center}
+   \markboth{#1}{#1}
+   \vspace*{4mm}
+}
+
+% Local Macros Put your favorite macros here that don't appear in
+% stat-macros.tex.  We can eventually incorporate them into
+% stat-macros.tex if they're of general use.
+
+\begin{document}
+
+\lecture{Exploring Gaussianss}{Ambrish Rawat}{}{February 12, 2017}
+
+The centrality of Gaussians in probability theory sources from the Central Limit Theorem. They exhibit a multitude of desirable properties which accounts for all the paparazzi in statistics community. In particular the correspondence between sample moments, maximum likelihood estimates and sufficient stastics makes Gaussians or more generally the exponential family distributions extremely interesting.
+
+In this post, I wanted to explore Gaussians from a Bayesian outlook for estimating its parameters. To begin with, suppose a set of raw observations is available as a large collection of one-dimensional real numbers. What does it look like? And what are some of its statistical properties?
+
+Visual inspection and sample statiscs provide reasonble motivation to model the observations as samples from a Gaussian distribution.
+
+$$x_s \sim p(x;\mu,\sigma)$$
+
+In particular each $x_i$ is a sample,
+
+$$ p(x_i) = (2\pi \sigma^2)^{\frac{-1}{2}} exp(\frac{-(x_i-\mu)^2}{2\sigma^2}) $$
+
+\subsection{Can we infer the parameters?}
+
+$$p(\theta|X,m) = \frac{p(X|\theta,m)p(\theta|m)}{p(X|m)}$$
+
+Here, $\theta=\{\mu,\sigma\}$
+
+$$p(X|\mu,\sigma,m) = \prod_{i=1}^N (2\pi \sigma^2)^{\frac{-1}{2}} exp(\frac{-(x_i-\mu)^2}{2\sigma^2})$$
+
+- Prior on $\mu$ and $\sigma$ such that there are conjugacy properties
+- Can we assume independence for these parameters? The graphical model suggests otherwise...
+\end{document}
+
+
+

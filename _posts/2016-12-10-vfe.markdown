@@ -79,33 +79,3 @@ equivalently,
 
 $$ \log p(D\vert m) =   \int q_{\lambda}(\theta)\log \frac{p(\theta, D\vert m)}{q_{\lambda}(\theta)}\mathrm{d}\theta + {D}_{KL}(q_{\lambda}(\theta)\vert\vert p(\theta\vert D,m))$$
 
-### Why use VI?
-
-- Its grounded in statistical physics
-
-Variational Inference is viserally gratifying because of its grounding in statiscal physics. The marginal-likelihood,$$\log p(D\vert m)$$, differs from the system's free-energy $$ \mathbb{E}_{q_{\lambda}(\theta)}[\log\frac{p(\theta, D\vert m)}{q_{\lambda}(\theta)}]$$, which in simplified form is the sum of energy and entropy $$\mathbb{E}_{q_{\lambda}(\theta)}[\log p(\theta, D\vert m)] + H(q)$$.
-
-- Its intergration simplified to optimisation
-
-VI owes its popularity to reducing an intractable integral to an optimisation problem which involves derivative computations.
-
-- It preserves the Bayesian modelling principles
-
-With parametric and analytical form of approximate posterior, VI compromises the least on uncertainty representation. 
-
-- It can be coupled or extended with other (mean-field) apprxoimations
-
-Guding principles in VI don't mandate a particular choice of $$q_{\lambda}(\theta)$$. In principle, an optimal choice of q can be obtained within any family of distributions. One extended approximation which is known to go well wioth VI, is the mean-field approximation. 
-
-### Why not use VI?
-
-KL divergence is not symmetric. In fact, minimising the reverse-KL leads to other interesting properties which is found to be useful in another approximate inference scheme - Expectation Propagation. Due to a specific chocie of similarity measure, VI has no guraantees that the obtained approximate posterior will have desired properties.
-
-- What are the qualitative propoerties of the obtained $$q_{\lambda^*}(\theta)$$
-
-In high-dimensional spaces and multi-modal exact posteriors, VI often fails. The choice of KL-divergence results can result in an approximate posterior where the the optimal apprxoimationm, $$q_{\lambda^*}(\theta)$$ distributes its mass in a counter-intuitive fashion. For instance, it could place a high-mass on regions where the orignal distribution had a low or zero mass. 
-
-- Are all the uncertainties propagated?
-
-As VI is often extended with a new layer of structure approximation like mean-field, it often fails to propagate uncertainties. 
-
