@@ -40,7 +40,7 @@ If we seek an actual expression of a posterior, we need to be more specific abou
 
 $$
 \begin{align\*}
- &p(\mu|X,\sigma_0,\eta) = \mathcal{N}(\mu|\mu_n,\sigma_n^2), \quad \mu_n = \frac{\frac{1}{\sigma_0^2}\sum_{x \in X} x + \frac{\eta_\mu}{\eta_\sigma^2}}{\frac{1}{\eta_\sigma^2} + \frac{n}{\sigma_0^2}} \quad \sigma_n^2 = \frac{1}{\frac{1}{\eta_\sigma^2} + \frac{n}{\sigma_0^2}}\\
+ &p(\mu|X,\sigma_0,\eta) = \mathcal{N}(\mu|\mu_n,\sigma_n^2), \quad \mu_n = \frac{\frac{1}{\sigma_0^2}\sum_{x \in X} x + \frac{\eta_\mu}{\eta_\sigma^2}}{\frac{1}{\eta_\sigma^2} + \frac{n}{\sigma_0^2}} \quad \sigma_n^2 = \frac{1}{\frac{1}{\eta_\sigma^2} + \frac{n}{\sigma_0^2}}\\\\
  & p(x^*|X,\sigma_0,\eta) = \mathcal{N}(x^*|\mu_n,\sigma_n^2+\sigma_0^2), \quad \mu_n = \frac{\frac{1}{\sigma_0^2}\sum_{x \in X} x + \frac{\eta_\mu}{\alpha_\sigma^2}}{\frac{1}{\eta_\sigma^2} + \frac{n}{\sigma_0^2}} \quad \sigma_n^2 = \frac{1}{\frac{1}{\eta_\sigma^2} + \frac{n}{\sigma_0^2}}
 \end{align\*} 
 $$
