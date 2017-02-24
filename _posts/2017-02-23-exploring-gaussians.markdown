@@ -65,7 +65,8 @@ $$
 & \frac{1}{\kappa_n} = \frac{1}{\gamma_\kappa} + n, \\
 & \alpha_n = \gamma_\alpha + \frac{n}{2}\\
 & \beta_n = \gamma_\beta + \frac{1}{2}\Big(\gamma_\mu^2\gamma_\kappa + \sum_{x\in X}(x-\mu_n^2\kappa_n)\Big)\\
-\text{predicti
+\text{predictive distribution: } & \text{this is \textit{pending}}
+
 $$
 
 
