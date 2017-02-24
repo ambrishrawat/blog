@@ -36,7 +36,12 @@ If we seek an actual expression of a posterior, we need to be more specific abou
 
 **Basic Model 1**: With $$\sigma_0$$ as a hyperamater (like $$\gamma$$ in the previous case). 
 
-
+$$
+\begin{aligni\*}
+\text{posterior: } &p(\mu|X,\sigma_0,\eta) = \mathcal{N}(\mu|\mu_n,\sigma_n^2), \quad \mu_n = \frac{\frac{1}{\sigma_0^2}\sum_{x \in X} x + \frac{\eta_\mu}{\eta_\sigma^2}}{\frac{1}{\eta_\sigma^2} + \frac{n}{\sigma_0^2}} \quad \sigma_n^2 = \frac{1}{\frac{1}{\eta_\sigma^2} + \frac{n}{\sigma_0^2}}\\\\
+\text{predictive distribution: } & p(x^*|X,\sigma_0,\eta) = \mathcal{N}(x^*|\mu_n,\sigma_n^2+\sigma_0^2), \quad \mu_n = \frac{\frac{1}{\sigma_0^2}\sum_{x \in X} x + \frac{\eta_\mu}{\alpha_\sigma^2}}{\frac{1}{\eta_\sigma^2} + \frac{n}{\sigma_0^2}} \quad \sigma_n^2 = \frac{1}{\frac{1}{\eta_\sigma^2} + \frac{n}{\sigma_0^2}}
+\end{align\*} 
+$$
 
 
 **Basic Model 2**: With $$\mu_0$$ as a hyperamater. 
