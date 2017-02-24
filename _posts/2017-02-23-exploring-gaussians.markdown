@@ -39,10 +39,10 @@ If we seek an actual expression of a posterior, we need to be more specific abou
 
 
 $$
-\begin{align\*}
+\begin{align*}
 p(\mu|X,\sigma_0,\eta) & = \\
 p(\mu|X,\sigma_0,\eta) & = 
-\end{align\*} 
+\end{align*} 
 $$
 
 
