@@ -39,8 +39,10 @@ If we seek an actual expression of a posterior, we need to be more specific abou
 
 
 $$
-\begin{align\*}
-\end{align\*} 
+\begin{align}
+r & \\\\
+t &
+\end{align} 
 $$
 
 
