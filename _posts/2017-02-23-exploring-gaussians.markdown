@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Create to understand"
-date:   2017-02-07 22:56:35 +0000
+title:  "Exploring Gaussians"
+date:   2017-02-23 22:56:35 +0000
 categories: 
 comments: true
 use_math: true
