@@ -48,10 +48,24 @@ $$
 
 **Basic Model 2**: With $$\mu_0$$ as a hyperamater. 
 
+$$
+\begin{align*}
+\text{posterior: } &p(\sigma^2|X,\mu_0,\beta) = \text{IG}(\sigma^2|\alpha_n,\beta_n), \quad \alpha_n = \zeta_\alpha + \frac{n}{2} \quad \beta_n = \zeta_\beta + \frac{1}{2}\sum_{x\in X}(x-\mu_0)\\
+\text{predictive distribution: } & p(x^*|X,\mu_0,\zeta) = \frac{\Gamma(\zeta_\alpha + \frac{1}{2})}{\Gamma(\zeta_\alpha)} \frac{1}{(2\pi\zeta_\beta)^{\frac{1}{2}}}\frac{1}{\big(1+\frac{1}{2\zeta_\beta}(x^*-\mu_0)^2\big)^{\zeta_\alpha+\frac{1}{2}}}
+\end{align*} 
+$$
 
 **Joint-prior Model 1**: With a joint prior on both $\mu$ and $\sigma$ (Normal-Gamma prior)
 
 
-
+$$
+\begin{align*}
+\text{posterior: } &p(\mu,\sigma^2|X,\gamma) = \text{NIG}(\mu,\sigma^2|\mu_n,\kappa_n,\alpha_n,\beta_n)\\
+& \mu_n = \frac{\gamma_\kappa\gamma_\mu + \sum_{x \in X}x}{\frac{1}{\gamma_\kappa}+n}\\
+& \frac{1}{\kappa_n} = \frac{1}{\gamma_\kappa} + n, \\
+& \alpha_n = \gamma_\alpha + \frac{n}{2}\\
+& \beta_n = \gamma_\beta + \frac{1}{2}\Big(\gamma_\mu^2\gamma_\kappa + \sum_{x\in X}(x-\mu_n^2\kappa_n)\Big)\\
+\text{predicti
+$$
 
 
