@@ -17,8 +17,9 @@ The centrality of Gaussians in probability theory sources from the Central Limit
 If you are faced with a Gaussian model for observations, one of the first tasks at hand is to estimate its parameters. To begin with, suppose a set of raw observations is available as a large collection of one-dimensional real numbers. 
 
 ![My helpful screenshot]({{ site.url }}/blog/assets/general-gm.png)
+![My helpful screenshot]({{ site.url }}/blog/assets/post/classic.png)
 
-**Observations**: }What does they look like? And what are some of their statistical properties?
+**Observations**: What does they look like? And what are some of their statistical properties?
 
 **Model**: Visual inspection and sample statiscs provide reasonble motivation to model the observations as samples from a Gaussian distribution.
 
